@@ -7,7 +7,7 @@ app = FastAPI()
 async def home():
     return "Welcome to the API Page of numwords.us"
 
-@app.get("/api/{lang}/{number}")
+@app.get("/{lang}/{number}")
 async def api(lang, number):
     return {"result": num2words(number, lang=lang)}
 
