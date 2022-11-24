@@ -3,8 +3,11 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+@app.get("/")
+async def home():
+    return "Welcome to the API Page"
 
 @app.get("/api/{lang}/{number}")
-async def root(lang, number):
+async def api(lang, number):
     return {"message": num2words(number, lang=lang)}
 
