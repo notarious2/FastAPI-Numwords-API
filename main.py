@@ -9,5 +9,5 @@ async def home():
 
 @app.get("/api/{lang}/{number}")
 async def api(lang, number):
-    return {"message": num2words(number, lang=lang)}
+    return {"result": num2words(number, lang=lang)}
 
